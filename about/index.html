@@ -1,9 +1,8 @@
 <html>
   <head>
-    <meta charset="utf-8">
     <style>
 
-      @font-face {
+@font-face {
         font-family: 'Banthers';
         src: url('../fonts/Swistblnk Banthers.ttf');
       }
@@ -12,32 +11,30 @@
         --hero_image_min_size: 10%;
         --hero_image_max_size: 20%;
         --hero_image_size: 20%;
-
         --social_media-color: #89b6e1/*dodgerblue*/;
-
-        --foobar: 0%;
-
         --page_width: 100px;
         --footer_height: auto;
+        --footer_height_px: 0px;
+
+        --color_burg: #875b56;
       }
 
       body {
         position: relative;
         background-color:white;
         font-family: 'Arial';
-        /*font-family: 'Banthers';*/
         font-weight: lighter;
-
-        min-height: 100vh;
-        min-width: 1000px;
         margin: 0 auto;
+      }
+
+      .content-wrap {
+        min-width: 475px;
+        padding-bottom: var(--footer_height_px);            /* Footer height */
       }
 
       h1, h2, h3, h4, h5, h6, p {
         font-family: 'Banthers';
         font-weight: 900;
-        /*font-family: 'Arial';*/
-        /*font-weight: lighter;*/
       }
 
       /* Navbar container */
@@ -49,186 +46,18 @@
         overflow: hidden; 
         background-color: inherit;
         color: rgb(32, 32, 32);
-        /*padding: 20px 0px;*/
         padding-top: 0;
-        /*float: right;*/
-      }
-
-      /* Navbar container */
-      .navbar-minor {
-        font-family: inherit;
-        font-size: 12px;
-        /*font-weight: bold;*/
-        z-index: 9;
-        overflow: hidden; 
-        background-color: inherit;
-        color: rgb(32, 32, 32);
-        /*padding: 20px 0px;*/
-        padding-top: 0;
-        /*float: right;*/
-      }
-
-      .navbar-minor a {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        color: inherit;
-        padding: 0px 10px;
-        text-decoration: none;
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      /* Links inside the navbar */
-      .navbar-main a {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        color: rgb(85,85,85);
-        padding: 0px 10px;
-        text-decoration: none;
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      /* Dropdown button */
-      .subnav .subnav-btn {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-
-        border: none;
-        outline: none;
-        background-color: inherit;
-        color: inherit;
-        font-family: inherit; /* Important for vertical align on mobile phones */
-        margin: 0; /* Important for vertical align on mobile phones */
-        padding-top: 0px;
-      }
-
-      .subnav .subnav-btn::after {
-        font-family: fontAwesome;
-        content: "\00a0\00a0\f078";
-        font-size: 10;
-        font-weight: normal;
-      }
-
-      /* The dropdown container */
-      .subnav {
-        background-color: inherit;
-        padding: 15px 10px;
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* Add a red background color to navbar links on hover */
-      .navbar a:hover, .subnav:hover .subnav-btn {
-        color:rgb(163, 163, 163);
-      }
-
-      /* Dropdown content (hidden by default) */
-      .subnav-content {
-        display: none;
-        position: absolute;
-        background-color:white;
-        text-align: left;
-        max-width: 200px;
-        margin-top:15px;
-
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-        animation: fade 0.5s ease;
-        animation-delay: 0s;
-      }
-
-      /* Links inside the dropdown */
-      .subnav-content a {
-        float: none;
-        color: inherit;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      /* Add a grey background color to dropdown links on hover */
-      .subnav-content a:hover {
-        background-color: rgb(255, 255, 255);
-        color:rgb(163, 163, 163);
-      }
-
-      /* Show the dropdown menu on hover */
-      .subnav:hover .subnav-content {
-        display: block;
-      }
-
-      .flex-wrapper {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .page-container {
-        position: relative;
-        min-height: 100vh;
-      }
-
-      .content-wrap {
-        padding-bottom: var(--footer_height);            /* Footer height */
       }
 
       header {   
         background-color: white;
         text-align: center;
-        /*padding: 10px 0px 25px 0px;*/
-
         max-width: -webkit-calc(1000px - (var(--page_width) * 2));
         max-width: calc(1000px - (var(--page_width) * 2));
         margin-right: auto;
         margin-left: auto;
         padding-right: var(--page_width);
         padding-left: var(--page_width);
-      }
-
-      .header-grid-item {
-        margin-bottom: 30px;
-        /*padding-left: 15px;*/
-        padding-top: 15;
-      }
-
-      .header-grid-wrapper {
-        display: grid;
-        
-        grid-template-areas:
-          'logo navbar_minor navbar_minor navbar_minor navbar_minor navbar_minor'
-          'logo navbar_major navbar_major navbar_major navbar_major navbar_major';
-
-        font-size: 15px;
-        color: #797979;
-      }
-
-      .header-grid-minor {
-        text-align: right;
-        padding-top: 15px;
-        grid-area: navbar_minor;
-      }
-
-      .header-grid-major {
-        text-align: right;
-        grid-area: navbar_major;
-      }
-
-      .header-grid-logo {
-        text-align: left;
-        grid-area: logo;
       }
 
       footer {
@@ -245,28 +74,11 @@
         height: var(--footer_height);            /* Footer height */
 
         z-index: 100;
-        min-width: 1000px;
-      }
-
-      footer h1, 
-      footer h2, 
-      footer h3, 
-      footer h4, 
-      footer h5 {
-        text-align: left;
-        color: inherit;
-      }
-
-      footer p {
-        text-align: left;
-        color: inherit;
-        font-size: 14;
-        line-height: 1.6;
       }
 
       footer ul {
         padding: 0px;
-        margin: 0px;
+        margin: 15px;
       }
 
       footer ul li {
@@ -275,6 +87,7 @@
           padding: 0px 10px 0px 10px;
           color: #515151;
       }
+      
       footer ul li:first-child {
           border-left:none;
       }
@@ -359,6 +172,11 @@
         line-height: 1.6;
       }
 
+      .content a {
+        color: var(--social_media-color);
+        text-decoration: none;
+      }
+
       .content .padding {
         width:350px;
         padding: 15px 15px 15px 15px;
@@ -368,220 +186,221 @@
         width: 16px;
         height: 16px;
         display: inline-block;
-        /*fill: var(--social_media-color);*/
         fill: #fff;
-        /*padding-right: 10px;*/
         padding: 0px 5px 0px 10px;
         vertical-align: text-top;
       }
 
-      a {
-        color: var(--social_media-color);
-        text-decoration: none;
-      }
+      .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /*background-color: #00BAF0;*/
+        /*background: linear-gradient(to left, #f46b45, #eea849);*/
+       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #FFF;
+        height: 50px;
+        padding: 1em;
 
-      .gallery .spotlight-group {
-          position: relative;
-          margin: auto;
-          /*padding: 45px 0;*/
-          display: grid;
-          grid-template-rows: repeat(3, 300px);
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 10px;
-          grid-auto-flow: dense;
-      }
-
-      .gallery .spotlight-group .spotlight .img{
-          position: relative;
-          height: 100%;
-          width: 100%;
-          overflow: hidden;
-          object-fit: cover;
-      }
-      /*
-      .gallery .spotlight-group .spotlight:first-child {
-          grid-column-start: span 2;
-          grid-row-start: span 2;
-      }
-        
-      .gallery .spotlight-group .spotlight:nth-child(2n+3) {
-          grid-row-start: span 3;
-      }
-
-      .gallery .spotlight-group .spotlight:nth-child(4n+5) {
-          grid-column-start: span 2;
-          grid-row-start: span 2;
-      }
-
-      .gallery .spotlight-group .spotlight:nth-child(6n+7) {
-          grid-row-start: span 1;
-      }
-
-      .gallery .spotlight-group .spotlight:nth-child(8n+9) {
-          grid-row-start: span 2;
-      }
-*/
-      @media(max-width: 800px) {
-          .gallery .spotlight-group {
-              grid-template-columns: auto
-          }
-      }
-
-      @media(max-width: 600px) {
-          .gallery .spotlight-group {
-              display: block;
-          }
-      }
-
-      /* Gallery Collections */
-      .gallery-collections {
-          position: relative;
-          margin: auto;
-          display: grid;
-          grid-template-rows: repeat(3, 250px);
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 25px;
-          grid-auto-flow: dense;
-          font-weight: 600;
-      }
-
-      .gallery-collections .img{
-          position: relative;
-          height: 100%;
-          width: 100%;
-          overflow: hidden;
-          object-fit: cover;
-      }
-
-      .gallery-thumb {
-        transition: .5s ease;
+        z-index: 100;
         position: relative;
-        text-align: center;
-        color: white;
       }
 
-      .gallery-thumb:hover {
-        transition: .5s ease;
-        position: relative;
-        text-align: center;
-        color: #2d2d2d;
-      }
-
-      .gallery-thumb .img {
-        transition: .5s ease;
-        filter:brightness(50%);
-        position: relative;
-        text-align: center;
-        color: white;
-      }
-
-      .gallery-thumb .img:hover {
-        filter:brightness(100%);
-        transition: .5s ease;
-        position: inherit;
-        text-align: inherit;
-        opacity: 0.2;
-      }
-
-      .gallery-title {
-        font-size: 24;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        margin-top: 75px;
-      }
-
-      @media(max-width: 800px) {
-          .gallery-collections {
-              grid-template-columns: auto
-          }
-      }
-
-      @media(max-width: 600px) {
-          .gallery-collections {
-              display: block;
-          }
-      }
-
-      .navi {
-        width: 100%;
-        overflow: auto;
-        margin-top: 1.5rem;
-      }
-
-      .navi-list ul, li {
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
         list-style-type: none;
-        
+        margin: 0;
+        padding: 0;
       }
 
-      .navi-list a {
+      .menu li a {
         font-family: 'Banthers';
         font-size: 25px;
-        color: 875b56;
-        text-decoration: none;
-        display: inline-block;
-        vertical-align: middle;
+        color: var(--color_burg);
+        text-decoration: none!important;
       }
 
-      .navi-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 35;
-        margin-bottom: 1.5rem;
-
+      .menu > li {
+        margin: 0 1rem;
+        overflow: hidden;
       }
 
-      .navi-list li:not(.centered-logo) {
-        flex: 1 0 auto;
+      .menu-button-container {
+        display: none;
+        height: 15%;
+        width: 95%;
       }
 
+      #menu-toggle {
+        display: none;
+      }
+
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        display: block;
+        background-color: var(--color_burg);
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+
+      .menu-button::before {
+        content: '';
+        margin-top: -8px;
+      }
+
+      .menu-button::after {
+        content: '';
+        margin-top: 8px;
+      }
+
+      #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+
+      #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+      }
+
+      #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
+
+      @media (max-width: 1000px) {
+        .menu-button-container {
+          display: flex;
+        }
+        .menu {
+          position: absolute;
+          top: 32;
+          margin-top: 50px;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #menu-toggle ~ .menu li {
+          height: 2.5em;
+          padding-top: 25px;
+          transform: translate(-150%);
+          transition: transform .25s ease-in-out;
+        }
+
+        #menu-toggle:checked ~ .menu li {
+          transform: translateX(0);
+        }
+
+        .menu > li {
+          text-decoration: none;
+          display: flex;
+          /*justify-content: center;*/
+          margin: 0;
+          padding: 0.5em 0;
+          padding-left: 3.0em;
+          width: 100%;
+          color: white;
+          /*background-color: #222;*/
+          max-width: 200px;
+        }
+
+        #menu-toggle:checked ~ .rectangle {
+          left: 0 !important;
+        }
+
+        .menu > .rectangle {
+          background:blue;
+        }
+
+        .menu > .centered-logo {
+          display: none;
+        }
+
+        .rectangle {
+          display: block;
+          position: fixed;
+          top: 0px;
+          left: -100%;
+          width: 200px;
+          height: 100%;
+          margin: 0;
+          padding: 80px 0;
+          list-style: none;
+          background-color: #FFF;
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+          transition-duration: .25s;
+          z-index: -2;
+        }
+      }
+      
       .logo {
         background: white;
         color: white;
         width: 220px;
         height: 75px;
       }
-
-      .logo-image {
+      
+      .logo-image-2 {
         position: absolute;
-        top: -15;
+        top: 2;
+      }
+      .logo-image {
+        position: relative;
+        z-index: -2;
+        top: -35px;
+        right: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: var(--page_width);
+        padding-left: var(--page_width);
       }
 
-  </style>
-  <script src="https://kit.fontawesome.com/7044913722.js" crossorigin="anonymous"></script>
+    </style>
+    <script src="https://kit.fontawesome.com/7044913722.js" crossorigin="anonymous"></script>
+</head>
 
-  </head>
+<body>
+  <div class="page-container">
+    <div class="content-wrap">
 
-  <body>
-    <div class="page-container">
-      <div class="content-wrap">
-        <header>
-          <nav class="navi">
-            <ul class="navi-list">
-                <li><a href="https://jakekurtz.github.io/wanderland_eurasier/home/">Home</a></li>
-                <li><a href="https://jakekurtz.github.io/wanderland_eurasier/about/">About</a></li>
-                <li><a href="https://jakekurtz.github.io/wanderland_eurasier/our_dogs/">Our Dogs</a></li>
-                <li class="centered-logo">
-                  <a href="https://jakekurtz.github.io/wanderland_eurasier/home/">
-                      <div class="logo"></div>
-                      <div class="logo-image"><img alt="Home" src="../resources/images/logo.png" width = 220px></div>
-                  </a>
-                </li>
-                <li><a href="https://jakekurtz.github.io/wanderland_eurasier/galleries/">Gallery</a></li>
-                <li><a href="#">Something</a></li>
-                <li><a href="https://jakekurtz.github.io/wanderland_eurasier/links/">Links</a></li>
-            </ul>
-          </nav>
-        </header>
-
-        <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../resources/images/Untitled_Panorama-3.png)">
-          <div class="hero-text"><h1>About Us</h1></div>
-        </div> 
-        
-        <div class="content"><style>
+      <section class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class="logo-image"><img alt="Home" src="../resources/images/logo.png" width = 220px></div>
+          <div class='menu-button'></div>
+        </label>
+        <div class="rectangle"></div>
+        <ul class="menu">
+          <li><a href="http://wanderlandeurasiers.ca/home/">Home</a></li>
+          <li><a href="http://wanderlandeurasiers.ca/about/">About</a></li>
+          <li><a href="http://wanderlandeurasiers.ca/our_dogs/">Our Dogs</a></li>
+          <li class="centered-logo">
+            <a href="http://wanderlandeurasiers.ca/home/">
+                <div class="logo"></div>
+                <div class="logo-image-2"><img alt="Home" src="../resources/images/logo.png" width = 220px></div>
+            </a>
+          </li>
+          <li><a href="http://wanderlandeurasiers.ca/galleries/">Gallery</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="http://wanderlandeurasiers.ca/links/">Links</a></li>
+        </ul>
+      </section>
+      
+      <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../resources/images/Untitled_Panorama-3.png)">
+        <div class="hero-text"><h1>About Us</h1></div>
+      </div> 
+      
+      <div class="content"><style>
   .image-stack {
     display: grid;
     position: relative; 
@@ -615,6 +434,19 @@
     grid-template-rows: 1fr;
     column-gap: 50px;
   }
+
+  @media (max-width: 800px) {
+
+    .test {
+      grid-template-columns: none;
+    }
+
+    .image-stack {
+      /*order: -1;*/
+      padding: 10px 0px 20px 0px;
+    }
+  }
+
 </style>
 
 <div class="test">
@@ -626,8 +458,8 @@
 <p>residing with our two Eurasiers in Calgary AB. Our experience goes back to the early 2000’s, with the first introduction of 
 Eurasiers to Canada with <a href="">Wayne Nelson (Sunwolf Eurasiers)</a>.</p>
 
-<p>Our breeding journey started in 2019 with <a href="https://jakekurtz.github.io/wanderland_eurasier/our_dogs/">Maple (Bellus Blinde)</a> and 
-hope to continue with <a href="https://jakekurtz.github.io/wanderland_eurasier/our_dogs/">Sunny (Sunwolf’s Norr Sulsken)</a>.</p>
+<p>Our breeding journey started in 2019 with <a href="http://wanderlandeurasiers.ca/our_dogs/">Maple (Bellus Blinde)</a> and 
+hope to continue with <a href="http://wanderlandeurasiers.ca/our_dogs/">Sunny (Sunwolf’s Norr Sulsken)</a>.</p>
 
 <p>We are members of <a href="https://www.eurasier.org/">Canadian Eurasier Club</a>, <a href="https://www.ckc.ca/en">Canadian Kennel Club</a> and have 
 completed the <a href="">KZG Eurasier Breeding Course</a>.</p>
@@ -646,67 +478,50 @@ completed the <a href="">KZG Eurasier Breeding Course</a>.</p>
         </div>
     </div>
 </div></div>
-      </div>
-
-      <footer>
-        <ul>
-          <li><h3 class="footer-heading">Wanderland Eurasier</h3></li>
-          <li>
-            <a href="https://www.facebook.com/eurasierclubofcanada/">
-              <svg class="svg-icon">
-                <use xlink:href="../assets/minima-social-icons.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/wanderland_eurasiers/">
-              <svg class="svg-icon">
-                <use xlink:href="../assets/minima-social-icons.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li><a class="u-email" href="mailto:your-email_0@example.com">wanderlandeurasiers@gmail.ca</a></li>
-        </ul>
-      </footer>
     </div>
 
-    <script>
-        const percentLabel = document.querySelector("#percent");
-        const originalTitle = document.title;
+    <footer id="_footer">
+      <ul>
+        <li><h3 class="footer-heading">Wanderland Eurasier</h3></li>
+        <li>
+          <a href="https://www.facebook.com/eurasierclubofcanada/">
+            <svg class="svg-icon">
+              <use xlink:href="../assets/minima-social-icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/wanderland_eurasiers/">
+            <svg class="svg-icon">
+              <use xlink:href="../assets/minima-social-icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li><a class="u-email" href="mailto:wanderlandeurasiers@gmail.ca">wanderlandeurasiers@gmail.ca</a></li>
+      </ul>
+    </footer>
 
-        function clamp(val, min, max) 
-        {
-          if (val <= min) return min;
-          else if (val >= max) return max;
-          else return val;
-        }
+  </div>
 
-        function lerp(a, b, t)
-        {
-          return a + t *(b-a);
-        }
+  <script>
+    // Get the root element
+    var r = document.querySelector(':root');
 
-        window.addEventListener("scroll", () => {
+    document.addEventListener('DOMContentLoaded', function() {
+      var x = document.getElementById('_footer');
+      var style = window.getComputedStyle(x, null);
+      r.style.setProperty('--footer_height_px', style.height);
 
-          var r = document.querySelector(':root');
-          var rs = getComputedStyle(r);
+    }, false);
 
-          let scrollTop = window.scrollY;
-          let docHeight = document.body.offsetHeight;
-          let winHeight = window.innerHeight;
-          var scrollPercent = scrollTop / (docHeight - winHeight);
+    window.addEventListener("resize", function(event) {
+      var x = document.getElementById('_footer');
+      var style = window.getComputedStyle(x, null);
+      r.style.setProperty('--footer_height_px', style.height);
+    })
 
-          var minSize = parseFloat(rs.getPropertyValue('--hero_image_min_size'));
-          var maxSize = parseFloat(rs.getPropertyValue('--hero_image_max_size'));
+  </script>
 
-          let imageSize = lerp(maxSize, minSize, clamp(scrollTop / 500, 0, 1));
-          
-          if (scrollPercent < 1 && scrollPercent > 0) {
-            r.style.setProperty('--hero_image_size', imageSize+'%');
-            r.style.setProperty('--foobar', (maxSize - imageSize)*10);
-          }
-        });
-    </script>
-  </body>
+</body>
 
 </html>
