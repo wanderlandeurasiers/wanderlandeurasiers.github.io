@@ -384,33 +384,33 @@
         </label>
         <div class="rectangle"></div>
         <ul class="menu">
-          <li><a href="http://wanderlandeurasiers.ca/home/">Home</a></li>
+          <li><a href="http://wanderlandeurasiers.ca/pages/">Home</a></li>
           <li><a href="http://wanderlandeurasiers.ca/about/">About</a></li>
           <li><a href="http://wanderlandeurasiers.ca/our_dogs/">Our Dogs</a></li>
           <li class="centered-logo">
-            <a href="http://wanderlandeurasiers.ca/home/">
+            <a href="http://wanderlandeurasiers.ca/pages/">
                 <div class="logo"></div>
                 <div class="logo-image-2"><img alt="Home" src="../resources/images/logo.png" width = 220px></div>
             </a>
           </li>
           <li><a href="http://wanderlandeurasiers.ca/galleries/">Gallery</a></li>
-          <li><a href="#">Something</a></li>
+          <li><a href="http://wanderlandeurasiers.ca/pedigree/">Pedigree</a></li>
           <li><a href="http://wanderlandeurasiers.ca/links/">Links</a></li>
         </ul>
       </section>
-      
-      <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(../resources/images/headers/DSC05599.jpg)">
+
+      <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(../resources/images/headers/DSC05494.JPG)">
         <div class="hero-text"><h1>Galleries</h1></div>
       </div> 
       
       <div class="content"><style>
-          .gallery .spotlight-group {
+        .gallery .spotlight-group {
           position: relative;
           margin: auto;
           /*padding: 45px 0;*/
           display: grid;
-          grid-template-rows: repeat(3, 300px);
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 250px);
+          grid-template-columns: repeat(2, 1fr);
           grid-gap: 10px;
           grid-auto-flow: dense;
       }
@@ -459,8 +459,8 @@
           position: relative;
           margin: auto;
           display: grid;
-          grid-template-rows: repeat(3, 250px);
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 300px);
+          grid-template-columns: repeat(2, 1fr);
           grid-gap: 25px;
           grid-auto-flow: dense;
           font-weight: 600;
@@ -478,6 +478,10 @@
         transition: .5s ease;
         position: relative;
         text-align: center;
+        color: white;
+      }
+
+      .content a {
         color: white;
       }
 
@@ -531,66 +535,56 @@
 
 <script src="../spotlight.bundle.js"></script>
 
-<div class="gallery-collections">
-  
+<div class="content-wrap">
+    <div class="gallery-collections">
     
-  
+        
     
-  
+        
     
-  
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_1.html">
-            <img class="img" src="../resources/images/gallery_1/23_gi.PNG" alt="" />
-            <div class="gallery-title">Gallery 1</div>
-        </a>
+        
+            <a class="gallery-thumb" href="/galleries/gallery_our_girls.html">
+                <img class="img" src="../resources/images/our_girls_gallery/s_n_m.jpg" alt="" />
+                <div class="gallery-title">Our Girls</div>
+            </a>
+        
     
-  
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_2.html">
-            <img class="img" src="../resources/images/headers/DSC05591.jpg" alt="" />
-            <div class="gallery-title">Gallery 2</div>
-        </a>
+        
     
-  
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_3.html">
-            <img class="img" src="../resources/images/gallery_3/kitchen_test_knife.PNG" alt="" />
-            <div class="gallery-title">Gallery 3</div>
-        </a>
+        
     
-  
+        
+            <a class="gallery-thumb" href="/galleries/sunwolf_litter_gallery.html">
+                <img class="img" src="../resources/images/sunwolf_litter_gallery/pup_portrait_final.png" alt="" />
+                <div class="gallery-title">Sunwolf Litters</div>
+            </a>
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_4.html">
-            <img class="img" src="../resources/images/headers/DSC05599.jpg" alt="" />
-            <div class="gallery-title">Gallery 4</div>
-        </a>
+        
+            <a class="gallery-thumb" href="/galleries/walk_gallery.html">
+                <img class="img" src="../resources/images/walks_gallery/DSC05591.jpg" alt="" />
+                <div class="gallery-title">Walks</div>
+            </a>
+        
     
-  
+        
+            <a class="gallery-thumb" href="/galleries/wanderland_litters_gallery.html">
+                <img class="img" src="../resources/images/wanderland_litters_gallery/PUPPIES-1.jpg" alt="" />
+                <div class="gallery-title">Wanderland Litters</div>
+            </a>
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_5.html">
-            <img class="img" src="../resources/images/gallery_5/PUPPIES-5.jpg" alt="" />
-            <div class="gallery-title">Puppies</div>
-        </a>
+        
     
-  
+        
     
-        <a class="gallery-thumb" href="/galleries/gallery_6.html">
-            <img class="img" src="../resources/images/headers/DSC05599.jpg" alt="" />
-            <div class="gallery-title">Gallery 6</div>
-        </a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
+    </div>
 </div>
 
 </div>
@@ -599,13 +593,6 @@
     <footer id="_footer">
       <ul>
         <li><h3 class="footer-heading">Wanderland Eurasier</h3></li>
-        <li>
-          <a href="https://www.facebook.com/eurasierclubofcanada/">
-            <svg class="svg-icon">
-              <use xlink:href="../assets/minima-social-icons.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
         <li>
           <a href="https://www.instagram.com/wanderland_eurasiers/">
             <svg class="svg-icon">
@@ -616,7 +603,7 @@
         <li><a class="u-email" href="mailto:wanderlandeurasiers@gmail.ca">wanderlandeurasiers@gmail.ca</a></li>
       </ul>
     </footer>
-
+    -->
   </div>
 
   <script>
